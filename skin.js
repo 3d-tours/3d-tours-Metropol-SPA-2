@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 5.0.1/15068
 // Filename: ???????01.ggsk
-// Generated Сб сен 26 20:39:29 2026
+// Generated Вс сен 27 22:48:37 2026
 
 function pano2vrSkin(player,base) {
 	var ggSkinVars = [];
@@ -1720,16 +1720,16 @@ function pano2vrSkin(player,base) {
 			return me.skin.findElements(id,regex);
 		}
 		
-		if (hotspot.skinid=='Стрелка') {
+		if (hotspot.skinid=='weblink') {
 			this.__div=document.createElement('div');
-			this.__div.ggId="\u0421\u0442\u0440\u0435\u043b\u043a\u0430";
+			this.__div.ggId="weblink";
 			this.__div.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 			this.__div.ggVisible=true;
 			this.__div.className='ggskin ggskin_hotspot ';
 			this.__div.ggType='hotspot';
 			hs ='';
 			hs+='height : 5px;';
-			hs+='left : 252px;';
+			hs+='left : 441px;';
 			hs+='position : absolute;';
 			hs+='top : 316px;';
 			hs+='visibility : inherit;';
@@ -1743,7 +1743,7 @@ function pano2vrSkin(player,base) {
 				return me.hotspot.url.substr(1, me.hotspot.url.length - 2);
 			}
 			this.__div.onclick=function () {
-				me.player.openNext(me.hotspot.target,"$cur");
+				me.player.openUrl(me.hotspot.url,"_self");
 				me.skin.hotspotProxyClick(me.hotspot.id);
 			}
 			this.__div.onmouseover=function () {
@@ -1796,9 +1796,9 @@ function pano2vrSkin(player,base) {
 				me.elementMouseOver['image_10']=true;
 			}
 			this._image_10.onmouseout=function () {
-				me._text_10.style[domTransition]='none';
-				me._text_10.style.visibility='hidden';
-				me._text_10.ggVisible=false;
+				me._text_2.style[domTransition]='none';
+				me._text_2.style.visibility='hidden';
+				me._text_2.ggVisible=false;
 				me.elementMouseOver['image_10']=false;
 			}
 			this._image_10.ontouchend=function () {
@@ -1806,25 +1806,25 @@ function pano2vrSkin(player,base) {
 			}
 			this._image_10.ggUpdatePosition=function () {
 			}
-			this._text_10=document.createElement('div');
-			this._text_10__text=document.createElement('div');
-			this._text_10.className='ggskin ggskin_textdiv';
-			this._text_10.ggTextDiv=this._text_10__text;
-			this._text_10.ggId="Text 1";
-			this._text_10.ggParameter={ rx:0,ry:0,a:180,sx:1,sy:1 };
-			this._text_10.ggVisible=false;
-			this._text_10.className='ggskin ggskin_text ';
-			this._text_10.ggType='text';
+			this._text_2=document.createElement('div');
+			this._text_2__text=document.createElement('div');
+			this._text_2.className='ggskin ggskin_textdiv';
+			this._text_2.ggTextDiv=this._text_2__text;
+			this._text_2.ggId="Text 2";
+			this._text_2.ggParameter={ rx:0,ry:0,a:180,sx:1,sy:1 };
+			this._text_2.ggVisible=false;
+			this._text_2.className='ggskin ggskin_text ';
+			this._text_2.ggType='text';
 			hs ='';
 			hs+='height : 37px;';
-			hs+='left : -38px;';
+			hs+='left : -43px;';
 			hs+='position : absolute;';
 			hs+='top : -47px;';
 			hs+='visibility : hidden;';
 			hs+='width : 130px;';
-			this._text_10.setAttribute('style',hs);
-			this._text_10.style[domTransform + 'Origin']='50% 50%';
-			this._text_10.style[domTransform]=parameterToTransform(this._text_10.ggParameter);
+			this._text_2.setAttribute('style',hs);
+			this._text_2.style[domTransform + 'Origin']='50% 50%';
+			this._text_2.style[domTransform]=parameterToTransform(this._text_2.ggParameter);
 			hs ='position:absolute;';
 			hs+='left: 0px;';
 			hs+='top:  0px;';
@@ -1837,54 +1837,45 @@ function pano2vrSkin(player,base) {
 			hs+='padding: 0px 1px 0px 1px;';
 			hs+='overflow: hidden;';
 			hs+='overflow-y: auto;';
-			this._text_10__text.setAttribute('style',hs);
-			this._text_10.ggUpdateText=function() {
-				var hs=me.ggUserdata.title;
-				if (hs!=this.ggText) {
-					this.ggText=hs;
-					this.ggTextDiv.innerHTML=hs;
-					if (this.ggUpdatePosition) this.ggUpdatePosition();
-				}
-			}
-			me._text_10.ggUpdateText();
-			this._text_10.appendChild(this._text_10__text);
-			me._text_10.ggIsActive=function() {
+			this._text_2__text.setAttribute('style',hs);
+			this._text_2__text.innerHTML=me.hotspot.title;
+			this._text_2.appendChild(this._text_2__text);
+			me._text_2.ggIsActive=function() {
 				if ((this.parentNode) && (this.parentNode.ggIsActive)) {
 					return this.parentNode.ggIsActive();
 				}
 				return false;
 			}
-			me._text_10.ggElementNodeId=function() {
+			me._text_2.ggElementNodeId=function() {
 				if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
 					return this.parentNode.ggElementNodeId();
 				}
 				return me.ggNodeId;
 			}
-			this._text_10.ggUpdatePosition=function () {
+			this._text_2.ggUpdatePosition=function () {
 			}
-			this._image_10.appendChild(this._text_10);
+			this._image_10.appendChild(this._text_2);
 			this.__div.appendChild(this._image_10);
 			this.hotspotTimerEvent=function() {
 				setTimeout(function() { me.hotspotTimerEvent(); }, 10);
 				if (me.elementMouseOver['image_10']) {
-					me._text_10.style[domTransition]='none';
-					me._text_10.style.visibility=(Number(me._text_10.style.opacity)>0||!me._text_10.style.opacity)?'inherit':'hidden';
-					me._text_10.ggVisible=true;
+					me._text_2.style[domTransition]='none';
+					me._text_2.style.visibility=(Number(me._text_2.style.opacity)>0||!me._text_2.style.opacity)?'inherit':'hidden';
+					me._text_2.ggVisible=true;
 				}
-				me._text_10.ggUpdateText();
 			}
 			this.hotspotTimerEvent();
 		} else
 		{
 			this.__div=document.createElement('div');
-			this.__div.ggId="weblink";
+			this.__div.ggId="ht_node";
 			this.__div.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 			this.__div.ggVisible=true;
 			this.__div.className='ggskin ggskin_hotspot ';
 			this.__div.ggType='hotspot';
 			hs ='';
 			hs+='height : 5px;';
-			hs+='left : 441px;';
+			hs+='left : 252px;';
 			hs+='position : absolute;';
 			hs+='top : 316px;';
 			hs+='visibility : inherit;';
@@ -1898,7 +1889,7 @@ function pano2vrSkin(player,base) {
 				return me.hotspot.url.substr(1, me.hotspot.url.length - 2);
 			}
 			this.__div.onclick=function () {
-				me.player.openUrl(me.hotspot.url,"_self");
+				me.player.openNext(me.hotspot.url,"$cur");
 				me.skin.hotspotProxyClick(me.hotspot.id);
 			}
 			this.__div.onmouseover=function () {
